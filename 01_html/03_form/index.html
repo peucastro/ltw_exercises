@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form</title>
+  </head>
+  <body>
+    <form method="get">
+      <fieldset>
+        <legend>Enter the data:</legend>
+        <label>Name: <input type="text" name="name" required /></label>
+        <label>Age:</label>
+        <input type="radio" name="age" />&lt; 18
+        <input type="radio" name="age" />19 - 35
+        <input type="radio" name="age" />36 - 48
+        <input type="radio" name="age" />&gt; 49
+
+        <label>
+          Profession: <input name="profession" list="profession" />
+          <datalist id="profession">
+            <option>Teacher</option>
+            <option>Engineer</option>
+            <option>Athlete</option>
+          </datalist>
+        </label>
+        <label>
+          Country:
+          <select name="country" required>
+            <option value="" disabled selected>Select a country</option>
+            <option>Angola</option>
+            <option>Brazil</option>
+            <option>Portugal</option>
+          </select>
+        </label>
+        <label>Interests:</label>
+        <input type="checkbox" name="interest" value="read" /> Read
+        <input type="checkbox" name="interest" value="run" /> Run
+        <input type="checkbox" name="interest" value="hangout" /> Hangout
+        <label
+          >How doid you find out about this site?
+          <textarea name="description"></textarea>
+        </label>
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
