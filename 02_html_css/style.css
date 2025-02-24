@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Imperial+Script&family=Ruda:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Imperial+Script&family=Ruda:wght@400..900&display=swap");
+
+* {
+  font-family: "Crimson Pro", serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 50vw;
+  max-width: 95vw;
+  color: #323232;
+}
+
+main {
+  background-color: #f7ede2;
+  padding: 3rem 2rem;
+}
+
+li {
+  padding: 0.2em;
+}
+
+ol,
+ul {
+  padding-left: 1em;
+}
+
+h1 {
+  font-family: "Imperial Script", serif;
+  font-size: 9rem;
+  font-weight: 200;
+  margin-top: 12px;
+  margin-bottom: 2px;
+}
+
+h2 {
+  font-family: "Ruda", serif;
+  font-size: 2.8rem;
+  font-weight: 100;
+  text-align: end;
+  border-bottom: 2px solid;
+  border-color: #323232;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+p,
+h3,
+li {
+  font-size: 1.85rem;
+  line-height: 2rem;
+}
+
+li {
+  margin: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.ingredient {
+  color: #7ea099;
+}
+
+#prep {
+  padding: 1em;
+  border: 2px solid #f28482;
+  border-right-width: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-style: dashed;
+  border-left-style: dashed;
+  border-bottom-style: dashed;
+  background-color: #f5cac3;
+}
+
+#prep > h4 {
+  text-transform: capitalize;
+}
+
+#prep > p,
+#prep > h4 {
+  margin: 8px;
+}
+
+#prep > p {
+  margin-bottom: 26px;
+}
