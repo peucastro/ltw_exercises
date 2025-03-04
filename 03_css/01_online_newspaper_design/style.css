@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css?family=Lora:400,700|Poppins:400,700");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1em;
+  font-family: "Lora", serif;
+  color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+body > header {
+  background-color: #046dd5;
+  padding: 1em;
+  color: white;
+}
+
+body > header > h2 {
+  margin-bottom: 1em;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+nav ul li {
+  border-top-style: solid;
+  border-top-width: 5px;
+}
+
+nav ul li:nth-child(1) {
+  border-color: #e1493e;
+}
+
+nav ul li:nth-child(2) {
+  border-color: #8aba56;
+}
+
+nav ul li:nth-child(3) {
+  border-color: #5b4282;
+}
+
+nav ul li:nth-child(4) {
+  border-color: #ff8932;
+}
+
+nav ul li:nth-child(5) {
+  border-color: #18b7e9;
+}
+
+nav ul li:nth-child(6) {
+  border-color: #e84c8b;
+}
+
+nav ul li a {
+  color: black;
+  display: block;
+  padding: 1em;
+  text-align: center;
+}
+
+/* TODO: remove this */
+nav input,
+nav label {
+  display: none;
+}
+
+aside {
+  background-color: #2a2f33;
+  padding: 1em;
+  color: white;
+  margin-bottom: 1em;
+}
+
+aside > article > h1 {
+  padding: 1em 0;
+}
+
+section > article {
+  margin-bottom: 2em;
+}
+
+section > article > header {
+  position: absolute;
+  font-size: 1.5em;
+  text-shadow: 2px 2px 4px #2a2f33;
+}
+
+section > article > img {
+  width: 100%;
+  height: auto;
+}
+
+section > article > p:first-of-type::first-letter {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+section > article > p {
+  margin-bottom: 1em;
+}
+
+footer {
+  padding: 1em;
+  color: white;
+}
+
+article > footer {
+  background-color: #e1493e;
+}
+
+article > footer > a {
+  text-decoration: underline;
+}
+
+.author::before {
+  content: "By ";
+}
+
+.date {
+  margin: 0 1em;
+}
+
+.comments::after {
+  content: " comments";
+}
+
+body > footer {
+  background-color: #2a2f33;
+}
+
+a {
+  color: white;
+}
+
+footer a {
+  text-decoration: underline;
+}
+
+a:not(footer a) {
+  text-decoration: none;
+}
