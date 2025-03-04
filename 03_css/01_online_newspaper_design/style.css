@@ -86,6 +86,11 @@ aside {
   margin-bottom: 1em;
 }
 
+section a:hover {
+  color: #2a2f33;
+  background-color: white;
+}
+
 aside > article > h1 {
   padding: 1em 0;
 }
