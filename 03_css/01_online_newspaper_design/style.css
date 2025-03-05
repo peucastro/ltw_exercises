@@ -7,9 +7,9 @@
 }
 
 body {
-  margin: 1em;
   font-family: "Lora", serif;
   color: black;
+  background-color: #edeff0;
 }
 
 h1,
@@ -31,51 +31,52 @@ body > header > h2 {
   margin-bottom: 1em;
 }
 
-nav ul {
+#menu ul {
   list-style: none;
-  display: flex;
-  flex-direction: column;
 }
 
-nav ul li {
+#menu ul li {
   border-top-style: solid;
   border-top-width: 5px;
+  width: 100%;
+  padding: 1em 2em;
+  text-align: center;
 }
 
-nav ul li:nth-child(1) {
+#menu ul li:nth-child(1) {
   border-color: #e1493e;
 }
 
-nav ul li:nth-child(2) {
+#menu ul li:nth-child(2) {
   border-color: #8aba56;
 }
 
-nav ul li:nth-child(3) {
+#menu ul li:nth-child(3) {
   border-color: #5b4282;
 }
 
-nav ul li:nth-child(4) {
+#menu ul li:nth-child(4) {
   border-color: #ff8932;
 }
 
-nav ul li:nth-child(5) {
+#menu ul li:nth-child(5) {
   border-color: #18b7e9;
 }
 
-nav ul li:nth-child(6) {
+#menu ul li:nth-child(6) {
   border-color: #e84c8b;
 }
 
-nav ul li a {
+#menu ul li a {
   color: black;
   display: block;
-  padding: 1em;
+  padding: 0.25em 0.5em;
   text-align: center;
 }
 
 /* TODO: remove this */
-nav input,
-nav label {
+#menu input,
+#menu label {
   display: none;
 }
 
