@@ -45,7 +45,7 @@ body > header {
   border-top-style: solid;
   border-top-width: 5px;
   width: 100%;
-  padding: 1em 2em;
+  padding: 0.8em;
   text-align: center;
 }
 
@@ -89,7 +89,6 @@ body > header {
   background-color: #2a2f33;
   padding: 1em;
   color: white;
-  margin-bottom: 1em;
 }
 
 #related > article > h1 {
@@ -107,7 +106,10 @@ body > header {
 
 #news > article > header {
   font-size: 1.5em;
-  text-shadow: 2px 2px 4px #2a2f33;
+  text-shadow: 3px 2px 4px #2a2f33;
+  padding-left: 1em;
+  padding-top: 1em;
+  max-width: 15vw;
 }
 
 #news > article > img {
