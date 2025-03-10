@@ -1,19 +1,18 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   width: 60em;
   margin: auto;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto 20%;
   grid-template-rows: auto 1fr auto 1fr;
 }
 
 body > header {
   grid-area: 1 / 1 / 2 / 3;
+}
+
+#signup {
+  display: flex;
+  justify-content: end;
 }
 
 #menu {
@@ -25,8 +24,16 @@ body > header {
   flex-direction: row;
 }
 
+#menu ul li a {
+  display: block;
+}
+
 #related {
   grid-area: 2 / 2 / 5 / 3;
+}
+
+#news > article > header {
+  position: absolute;
 }
 
 #news {

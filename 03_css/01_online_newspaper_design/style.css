@@ -27,12 +27,18 @@ body > header {
   color: white;
 }
 
-body > header > h2 {
-  margin-bottom: 1em;
+#signup > a:first-child {
+  padding-right: 1em;
+  margin-right: 1em;
+  border-width: 0 1px 0 0;
+  border-style: solid;
+  border-color: #ffffff;
 }
 
 #menu ul {
   list-style: none;
+  margin-bottom: 1em;
+  background-color: #ffffff;
 }
 
 #menu ul li {
@@ -69,7 +75,6 @@ body > header > h2 {
 
 #menu ul li a {
   color: black;
-  display: block;
   padding: 0.25em 0.5em;
   text-align: center;
 }
@@ -80,56 +85,49 @@ body > header > h2 {
   display: none;
 }
 
-aside {
+#related {
   background-color: #2a2f33;
   padding: 1em;
   color: white;
   margin-bottom: 1em;
 }
 
-section a:hover {
+#related > article > h1 {
+  padding: 1em 0;
+}
+
+#news a:hover {
   color: #2a2f33;
   background-color: white;
 }
 
-aside > article > h1 {
-  padding: 1em 0;
+#news > article {
+  margin-bottom: 1em;
 }
 
-section > article {
-  margin-bottom: 2em;
-}
-
-section > article > header {
-  position: absolute;
+#news > article > header {
   font-size: 1.5em;
   text-shadow: 2px 2px 4px #2a2f33;
 }
 
-section > article > img {
+#news > article > img {
   width: 100%;
   height: auto;
 }
 
-section > article > p:first-of-type::first-letter {
+#news > article > p:first-of-type::first-letter {
   font-size: 2em;
-  font-weight: bold;
 }
 
-section > article > p {
+#news > article > p {
   margin-bottom: 1em;
 }
 
-footer {
-  padding: 1em;
-  color: white;
-}
-
-article > footer {
+#news > article > footer {
   background-color: #e1493e;
 }
 
-article > footer > a {
+#news > article > footer > a {
   text-decoration: underline;
 }
 
@@ -149,12 +147,17 @@ body > footer {
   background-color: #2a2f33;
 }
 
-a {
+footer {
+  padding: 1em;
   color: white;
 }
 
 footer a {
   text-decoration: underline;
+}
+
+a {
+  color: white;
 }
 
 a:not(footer a) {
