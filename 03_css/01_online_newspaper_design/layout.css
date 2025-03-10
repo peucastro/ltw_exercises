@@ -2,8 +2,8 @@ body {
   width: 60em;
   margin: auto;
   display: grid;
-  grid-template-columns: auto 20%;
-  grid-template-rows: auto 1fr auto 1fr;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: auto auto 1fr auto;
 }
 
 body > header {
@@ -21,7 +21,10 @@ body > header {
 
 #menu ul {
   display: flex;
-  flex-direction: row;
+}
+
+#menu ul li {
+  flex-grow: 1;
 }
 
 #menu ul li a {
@@ -32,12 +35,20 @@ body > header {
   grid-area: 2 / 2 / 5 / 3;
 }
 
+#news {
+  grid-area: 3 / 1 / 4 / 2;
+}
+
 #news > article > header {
   position: absolute;
 }
 
-#news {
-  grid-area: 3 / 1 / 4 / 2;
+#news > article > footer {
+  display: flex;
+}
+
+#news > article > footer > .author {
+  flex-grow: 1;
 }
 
 body > footer {
