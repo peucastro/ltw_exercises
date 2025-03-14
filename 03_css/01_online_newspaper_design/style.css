@@ -79,9 +79,7 @@ body > header {
   text-align: center;
 }
 
-/* TODO: remove this */
-#menu input,
-#menu label {
+#menu input {
   display: none;
 }
 

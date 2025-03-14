@@ -1,0 +1,61 @@
+@media (max-width: 60em) {
+  #related {
+    display: none;
+  }
+
+  body {
+    grid-template-columns: auto;
+    width: auto;
+  }
+}
+
+@media (max-width: 30em) {
+  /* hamburger menu: web.fe.up.pt/~arestivo/page/solutions/css/note2/ */
+  /* increase image links size */
+
+  #menu ul {
+    flex-direction: column;
+    transition: 0.5s all;
+    overflow: hidden;
+    max-height: 30em;
+  }
+
+  #menu ul li {
+    border-top-style: none;
+    border-left-style: solid;
+    border-left-width: 5px;
+  }
+
+  /* TODO: fix hover */
+  #menu ul li:hover {
+    background-color: black;
+    color: white;
+  }
+
+  #menu ul li a {
+    text-align: start;
+  }
+
+  #hamburger:checked + label + ul {
+    max-height: 0;
+  }
+
+  label.hamburger::before {
+    content: "\2715";
+  }
+
+  #hamburger:checked + label::before {
+    content: "\2630";
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  label.hamburger {
+    background-color: #2a2f33;
+    color: white;
+    display: block;
+    padding: 1em;
+  }
+}
