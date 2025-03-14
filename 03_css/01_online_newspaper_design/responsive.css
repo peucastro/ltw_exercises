@@ -58,4 +58,22 @@
     display: block;
     padding: 1em;
   }
+
+  #news > article > header {
+    position: static;
+    font-size: 1em;
+    color: black;
+    width: 100%;
+  }
+
+  #news > article > header {
+    font-size: 1em;
+    text-shadow: none;
+    padding: 0em 0em 1em 1em;
+    max-width: 100vw;
+  }
+
+  #news > article > header > h1 > a {
+    color: black;
+  }
 }
