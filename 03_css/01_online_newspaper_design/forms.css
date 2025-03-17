@@ -1,0 +1,54 @@
+body:has(#register) #related,
+body:has(#login) #related {
+  display: none;
+}
+
+body:has(#register) #menu,
+body:has(#login) #menu {
+  grid-area: 2 / 1 / 3 / 3;
+}
+
+#register,
+#login {
+    grid-area: 3 / 1 / 4 / 3;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 5em;
+}
+
+#register > form,
+#login > form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+  gap: 1em;
+}
+
+#register > form > label,
+#login > form > label {
+  display: flex;
+  flex-direction: column;
+}
+
+#register
+  > form
+  > label
+  > input[name="username"]
+  #login
+  > form
+  > label
+  > input[name="username"] {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+#register > form > label > input[name="email"] {
+  grid-area: 3 / 1 / 4 / 2;
+}
+
+#register > form > label > input[name="password"],
+#login > form > label > input[name="password"] {
+  grid-area: 4 / 1 / 5 / 2;
+}
