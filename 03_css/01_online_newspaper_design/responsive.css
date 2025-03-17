@@ -17,7 +17,7 @@
     flex-direction: column;
     transition: 0.5s all;
     overflow: hidden;
-    max-height: 30em;
+    max-height: 0;
   }
 
   #menu ul li {
@@ -37,15 +37,15 @@
   }
 
   #hamburger:checked + label + ul {
-    max-height: 0;
+    max-height: 30em;
   }
 
   label.hamburger::before {
-    content: "\2715";
+    content: "\2630";
   }
 
   #hamburger:checked + label::before {
-    content: "\2630";
+    content: "\2715";
   }
 
   #hamburger {
