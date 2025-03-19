@@ -11,3 +11,12 @@ function getAllNews($db)
   $articles = $stmt->fetchAll();
   return $articles;
 }
+
+function getArticle($db, $id)
+{
+  $stmt = $db->prepare('SELECT * FROM news JOIN users USING (username) WHERE id = :id');
+  $stmt->bindParam(':id', $id);
+  $stmt->execute();
+  $article = $stmt->fetch();
+  return $article;
+}

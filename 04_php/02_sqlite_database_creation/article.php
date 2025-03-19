@@ -1,9 +1,9 @@
 <?php
-$db = new PDO('sqlite:news.db');
+require_once('database/connection.php');
+require_once('database/news.php');
 
-$stmt = $db->prepare('SELECT * FROM news JOIN users USING (username) WHERE id = ?');
-$stmt->execute(array($_GET['id']));
-$article = $stmt->fetch();
+$db = getDatabaseConnection();
+$article = getArticle($db, $_GET['id']);
 
 $stmt = $db->prepare('SELECT * FROM comments JOIN users USING (username) WHERE news_id = ?');
 $stmt->execute(array($_GET['id']));
