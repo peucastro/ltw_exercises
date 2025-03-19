@@ -1,13 +1,11 @@
 <?php
 require_once('database/connection.php');
 require_once('database/news.php');
+require_once('database/comments.php');
 
 $db = getDatabaseConnection();
 $article = getArticle($db, $_GET['id']);
-
-$stmt = $db->prepare('SELECT * FROM comments JOIN users USING (username) WHERE news_id = ?');
-$stmt->execute(array($_GET['id']));
-$comments = $stmt->fetchAll();
+$comments = getComments($db, $_GET['id']);
 ?>
 
 
