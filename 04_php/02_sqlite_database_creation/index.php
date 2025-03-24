@@ -8,7 +8,7 @@ $db = getDatabaseConnection();
 $articles = getAllNews($db);
 ?>
 
-<?= output_header("Super legit Fake News") ?>
+<?= output_header("Super Legit News") ?>
 <section id="news">
     <?php foreach ($articles as $article) { ?>
         <article>
