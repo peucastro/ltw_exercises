@@ -1,3 +1,5 @@
+<?php require_once('comments.php'); ?>
+
 <?php function output_article($article)
 { ?>
     <article>
@@ -20,15 +22,34 @@
     </article>
 <?php } ?>
 
-<?php function output_full_article($article)
+<?php function output_article_footer($article, $comments)
 { ?>
-    <article>
-        <header>
-            <h1><a href="article.php?id=<?= $article['id'] ?>"><?= $article['title'] ?></a></h1>
-        </header>
-        <img src="https://picsum.photos/600/300?business" alt="">
-        <p><?= $article['fulltext'] ?></p>
-    </article>
+    <footer>
+        <span class="author"><?= $article['name'] ?></span>
+        <span class="tags">
+            <?php $tags = explode(',', $article['tags']); ?>
+            <?php foreach ($tags as $tag) { ?>
+                <a href="/"><?= '#' . $tag ?></a>
+            <?php } ?>
+        </span>
+        <span class="date"><?= $date = date('F j', $article['published']) ?></span>
+        <a class="comments" href="article.php?id=<?= $article['id'] ?>#comments"><?= count($comments) ?></a>
+    </footer>
+
+<?php } ?>
+<?php function output_full_article($article, $comments)
+{ ?>
+    <section id="news">
+        <article>
+            <header>
+                <h1><a href="article.php?id=<?= $article['id'] ?>"><?= $article['title'] ?></a></h1>
+            </header>
+            <img src="https://picsum.photos/600/300?business" alt="">
+            <p><?= $article['fulltext'] ?></p>
+            <?= output_comments($comments) ?>
+            <?= output_article_footer($article, $comments) ?>
+        </article>
+    </section>
 <?php } ?>
 
 <?php function output_article_list($articles)
@@ -36,5 +57,4 @@
     <section id="news">
         <?php foreach ($articles as $article) output_article($article); ?>
     </section>
-
 <?php } ?>
