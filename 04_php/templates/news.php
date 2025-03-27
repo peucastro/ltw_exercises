@@ -1,4 +1,10 @@
-<?php require_once('comments.php'); ?>
+<?php
+
+declare(strict_types=1);
+
+require_once('comments.php');
+
+?>
 
 <?php function output_article($article)
 { ?>
@@ -46,8 +52,8 @@
             </header>
             <img src="https://picsum.photos/600/300?business" alt="">
             <p><?= $article['fulltext'] ?></p>
-            <?= output_comments($comments) ?>
-            <?= output_article_footer($article, $comments) ?>
+            <?php output_comments($comments) ?>
+            <?php output_article_footer($article, $comments) ?>
         </article>
     </section>
 <?php } ?>

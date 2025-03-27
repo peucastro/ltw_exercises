@@ -1,6 +1,11 @@
+<?php
+
+declare(strict_types=1);
+
+?>
+
 <?php function output_header($title)
 { ?>
-
     <!DOCTYPE html>
     <html lang="en-US">
 
@@ -62,12 +67,10 @@
 
     <?php function output_footer()
     { ?>
-
         <footer>
             <p>&copy; Fake News, 2022</p>
         </footer>
     </body>
 
     </html>
-
 <?php } ?>

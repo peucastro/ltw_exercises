@@ -1,3 +1,9 @@
+<?php
+
+declare(strict_types=1);
+
+?>
+
 <?php function output_comments($comments)
 { ?>
     <section id="comments">
