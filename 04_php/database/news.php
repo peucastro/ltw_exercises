@@ -5,7 +5,7 @@ declare(strict_types=1);
 ?>
 
 <?php
-function getAllNews($db)
+function getAllNews(PDO $db): array
 {
   $stmt = $db->prepare('SELECT news.*, users.*, COUNT(comments.id) AS comments
     FROM news JOIN
@@ -17,7 +17,7 @@ function getAllNews($db)
   return $stmt->fetchAll();
 }
 
-function getArticle($db, $id)
+function getArticle(PDO $db, int $id): array
 {
   $stmt = $db->prepare('SELECT * FROM news JOIN users USING (username) WHERE id = :id');
   $stmt->bindParam(':id', $id);

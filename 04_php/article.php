@@ -10,8 +10,8 @@ require_once('templates/common.php');
 require_once('templates/news.php');
 
 $db = getDatabaseConnection();
-$article = getArticle($db, $_GET['id']);
-$comments = getComments($db, $_GET['id']);
+$article = getArticle($db, intval($_GET['id']));
+$comments = getComments($db, intval($_GET['id']));
 
 
 output_header("Super Legit News");

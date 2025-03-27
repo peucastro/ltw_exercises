@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 ?>
 
-<?php function output_comments($comments)
+<?php function output_comments($comments): void
 { ?>
     <section id="comments">
         <h1><?= count($comments) ?> Comments</h1>

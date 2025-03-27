@@ -6,7 +6,7 @@ require_once('comments.php');
 
 ?>
 
-<?php function output_article($article)
+<?php function output_article($article): void
 { ?>
     <article>
         <header>
@@ -28,7 +28,7 @@ require_once('comments.php');
     </article>
 <?php } ?>
 
-<?php function output_article_footer($article, $comments)
+<?php function output_article_footer($article, $comments): void
 { ?>
     <footer>
         <span class="author"><?= $article['name'] ?></span>
@@ -43,7 +43,7 @@ require_once('comments.php');
     </footer>
 
 <?php } ?>
-<?php function output_full_article($article, $comments)
+<?php function output_full_article($article, $comments): void
 { ?>
     <section id="news">
         <article>
@@ -58,7 +58,7 @@ require_once('comments.php');
     </section>
 <?php } ?>
 
-<?php function output_article_list($articles)
+<?php function output_article_list($articles): void
 { ?>
     <section id="news">
         <?php foreach ($articles as $article) output_article($article); ?>

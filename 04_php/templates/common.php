@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 ?>
 
-<?php function output_header($title)
+<?php function output_header(string $title): void
 { ?>
     <!DOCTYPE html>
     <html lang="en-US">
