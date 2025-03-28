@@ -53,7 +53,7 @@ require_once(__DIR__ . '/comments.tpl.php');
             <img src="https://picsum.photos/600/300?business" alt="">
             <p><?= $article['fulltext'] ?></p>
             <?php output_comments($comments) ?>
-            <a href="edit_article.php?id=<?= $article['id'] ?>">Edit this article!</a>
+            <button onclick="window.location.href='edit_article.php?id=<?= $article['id'] ?>'">Edit this article</button>
             <?php output_article_footer($article, $comments) ?>
         </article>
     </section>
