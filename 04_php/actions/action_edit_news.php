@@ -19,4 +19,4 @@ $stmt->bindParam(':introduction', $introduction);
 $stmt->bindParam(':fulltext', $fulltext);
 $stmt->execute();
 
-header('Location: ../article.php?id=' . $id);
+header('Location: /pages/article.php?id=' . $id);

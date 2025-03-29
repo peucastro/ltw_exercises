@@ -10,7 +10,7 @@ require_once(__DIR__ . '/comments.tpl.php');
 { ?>
     <article>
         <header>
-            <h1><a href="../pages/article.php?id=<?= $article['id'] ?>"><?= $article['title'] ?></a></h1>
+            <h1><a href="/pages/article.php?id=<?= $article['id'] ?>"><?= $article['title'] ?></a></h1>
         </header>
         <img src="https://picsum.photos/600/300?business" alt="">
         <p><?= $article['introduction'] ?></p>
@@ -48,7 +48,7 @@ require_once(__DIR__ . '/comments.tpl.php');
     <section id="news">
         <article>
             <header>
-                <h1><a href="../pages/article.php?id=<?= $article['id'] ?>"><?= $article['title'] ?></a></h1>
+                <h1><a href="/pages/article.php?id=<?= $article['id'] ?>"><?= $article['title'] ?></a></h1>
             </header>
             <img src="https://picsum.photos/600/300?business" alt="">
             <p><?= $article['fulltext'] ?></p>

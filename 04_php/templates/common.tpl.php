@@ -15,9 +15,9 @@ declare(strict_types=1);
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="../css/style.css" rel="stylesheet">
         <link href="../css/layout.css" rel="stylesheet">
-        <link href="../css/responsive.css" rel="stylesheet">
-        <link href="../css/comments.css" rel="stylesheet">
-        <link href="../css/forms.css" rel="stylesheet">
+        <link href="/css/responsive.css" rel="stylesheet">
+        <link href="/css/comments.css" rel="stylesheet">
+        <link href="/css/forms.css" rel="stylesheet">
     </head>
 
     <body>
@@ -25,8 +25,8 @@ declare(strict_types=1);
             <h1><a href="/">Super Legit News</a></h1>
             <h2><a href="/">Where fake news are born!</a></h2>
             <div id="signup">
-                <a href="register.html">Register</a>
-                <a href="login.html">Login</a>
+                <a href="/pages/register.php">Register</a>
+                <a href="/pages/login.php">Login</a>
             </div>
         </header>
         <nav id="menu">
