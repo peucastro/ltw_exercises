@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+require_once(__DIR__ . '/../utils/session.php');
 require_once(__DIR__ . '/comments.tpl.php');
 
 ?>
@@ -43,7 +44,7 @@ require_once(__DIR__ . '/comments.tpl.php');
     </footer>
 
 <?php } ?>
-<?php function output_full_article($article, $comments): void
+<?php function output_full_article($article, $comments, Session $session): void
 { ?>
     <section id="news">
         <article>
@@ -53,7 +54,9 @@ require_once(__DIR__ . '/comments.tpl.php');
             <img src="https://picsum.photos/600/300?business" alt="">
             <p><?= $article['fulltext'] ?></p>
             <?php output_comments($comments) ?>
-            <button onclick="window.location.href='edit_article.php?id=<?= $article['id'] ?>'">Edit this article</button>
+            <?php if ($session->isLoggedIn()) { ?>
+                <button onclick="window.location.href='edit_article.php?id=<?= $article['id'] ?>'">Edit this article</button>
+            <?php } ?>
             <?php output_article_footer($article, $comments) ?>
         </article>
     </section>

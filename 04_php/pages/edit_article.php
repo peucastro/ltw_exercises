@@ -11,6 +11,9 @@ require_once(__DIR__ . '/../database/news.db.php');
 require_once(__DIR__ . '/../templates/common.tpl.php');
 require_once(__DIR__ . '/../templates/edit_article.tpl.php');
 
+if (!$session->isLoggedIn())
+    header('Location: /');
+
 $db = getDatabaseConnection();
 $article = getArticle($db, intval($_GET['id']));
 

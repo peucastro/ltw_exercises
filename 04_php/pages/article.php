@@ -18,5 +18,5 @@ $comments = getComments($db, intval($_GET['id']));
 
 
 output_header("Super Legit News", $session);
-output_full_article($article, $comments);
+output_full_article($article, $comments, $session);
 output_footer();
