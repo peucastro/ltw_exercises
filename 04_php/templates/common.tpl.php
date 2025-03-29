@@ -2,9 +2,11 @@
 
 declare(strict_types=1);
 
+require_once(__DIR__ . '/../utils/session.php');
+
 ?>
 
-<?php function output_header(string $title): void
+<?php function output_header(string $title, Session $session): void
 { ?>
     <!DOCTYPE html>
     <html lang="en-US">
@@ -13,8 +15,8 @@ declare(strict_types=1);
         <title><?= $title ?></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="../css/style.css" rel="stylesheet">
-        <link href="../css/layout.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
+        <link href="/css/layout.css" rel="stylesheet">
         <link href="/css/responsive.css" rel="stylesheet">
         <link href="/css/comments.css" rel="stylesheet">
         <link href="/css/forms.css" rel="stylesheet">
@@ -25,8 +27,12 @@ declare(strict_types=1);
             <h1><a href="/">Super Legit News</a></h1>
             <h2><a href="/">Where fake news are born!</a></h2>
             <div id="signup">
-                <a href="/pages/register.php">Register</a>
-                <a href="/pages/login.php">Login</a>
+                <?php if (!$session->isLoggedIn()) { ?>
+                    <a href="/pages/register.php">Register</a>
+                    <a href="/pages/login.php">Login</a>
+                <?php } else { ?>
+                    <a href="/actions/action_logout.php">Logout</a>
+                <?php } ?>
             </div>
         </header>
         <nav id="menu">
