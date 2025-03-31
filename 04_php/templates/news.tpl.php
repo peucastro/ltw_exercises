@@ -53,7 +53,7 @@ require_once(__DIR__ . '/comments.tpl.php');
             </header>
             <img src="https://picsum.photos/600/300?business" alt="">
             <p><?= $article['fulltext'] ?></p>
-            <?php output_comments($comments) ?>
+            <?php output_comments($article, $comments) ?>
             <?php if ($session->isLoggedIn()) { ?>
                 <button onclick="window.location.href='edit_article.php?id=<?= $article['id'] ?>'">Edit this article
                 </button>
