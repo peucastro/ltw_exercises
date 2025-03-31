@@ -55,7 +55,12 @@ require_once(__DIR__ . '/comments.tpl.php');
             <p><?= $article['fulltext'] ?></p>
             <?php output_comments($comments) ?>
             <?php if ($session->isLoggedIn()) { ?>
-                <button onclick="window.location.href='edit_article.php?id=<?= $article['id'] ?>'">Edit this article</button>
+                <button onclick="window.location.href='edit_article.php?id=<?= $article['id'] ?>'">Edit this article
+                </button>
+                <form action="/actions/action_remove_article.php" method="post">
+                    <input type="hidden" name="id" value="<?= $article['id'] ?>">
+                    <button type="submit">Delete this article!</button>
+                </form>
             <?php } ?>
             <?php output_article_footer($article, $comments) ?>
         </article>
