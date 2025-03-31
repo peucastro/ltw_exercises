@@ -15,6 +15,7 @@ $user = getUser($username, $password);
 if ($user !== false) {
     $session->setId($user['id'] ?? 0);
     $session->setName($user['name'] ?? $username);
+    $session->setUsername($user['username']);
     header('Location: /');
     exit();
 } else {

@@ -15,7 +15,7 @@ $db = getDatabaseConnection();
 $title = $_POST['title'];
 $published = time();
 $tags = $_POST['tags'];
-$username = $session->getName();
+$username = $session->getUsername();
 $introduction = $_POST['introduction'];
 $fulltext = $_POST['fulltext'];
 
