@@ -31,6 +31,7 @@ require_once(__DIR__ . '/../utils/session.php');
                     <a href="/pages/register.php">Register</a>
                     <a href="/pages/login.php">Login</a>
                 <?php } else { ?>
+                    <a href="/pages/insert_article.php">Write a new article</a>
                     <a href="/actions/action_logout.php">Logout</a>
                 <?php } ?>
             </div>

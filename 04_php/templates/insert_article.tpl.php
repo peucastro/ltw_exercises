@@ -8,9 +8,9 @@ declare(strict_types=1);
 { ?>
     <section>
         <form action="/actions/action_insert_article.php" method="post">
-            <input type="hidden" name="id"">
+            <input type="hidden" name="id">
             <label>Title:
-                <input type="text" name="title"">
+                <input type="text" name="title">
             </label>
             <label>Tags:
                 <input type="text" name="tags">

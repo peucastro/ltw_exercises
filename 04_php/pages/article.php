@@ -18,5 +18,9 @@ $comments = getComments($db, intval($_GET['id']));
 
 
 output_header("Super Legit News", $session);
-output_full_article($article, $comments, $session);
+if ($article) {
+    output_full_article($article, $comments, $session);
+} else {
+    echo "Sorry, that article doesn't exist.";
+}
 output_footer();
