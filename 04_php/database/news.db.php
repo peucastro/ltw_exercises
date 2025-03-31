@@ -2,9 +2,6 @@
 
 declare(strict_types=1);
 
-?>
-
-<?php
 function getAllNews(PDO $db): array
 {
     $stmt = $db->prepare('SELECT news.*, users.*, COUNT(comments.id) AS comments

@@ -23,8 +23,8 @@ require_once(__DIR__ . '/comments.tpl.php');
                     <a href="/"><?= '#' . $tag ?></a>
                 <?php } ?>
             </span>
-            <span class="date"><?= $date = date('F j', $article['published']) ?></span>
-            <a class="comments" href="article.php?id=<?= $article['id'] ?>#comments"><?= $article['comments'] ?></a>
+            <span class="date"><?= date('F j', $article['published']) ?></span>
+            <a class="comments" href="/pages/article.php?id=<?= $article['id'] ?>#comments"><?= $article['comments'] ?></a>
         </footer>
     </article>
 <?php } ?>
@@ -39,8 +39,8 @@ require_once(__DIR__ . '/comments.tpl.php');
                 <a href="/"><?= '#' . $tag ?></a>
             <?php } ?>
         </span>
-        <span class="date"><?= $date = date('F j', $article['published']) ?></span>
-        <a class="comments" href="article.php?id=<?= $article['id'] ?>#comments"><?= count($comments) ?></a>
+        <span class="date"><?= date('F j', $article['published']) ?></span>
+        <a class="comments" href="/pages/article.php?id=<?= $article['id'] ?>#comments"><?= count($comments) ?></a>
     </footer>
 
 <?php } ?>
