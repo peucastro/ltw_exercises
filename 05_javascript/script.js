@@ -9,7 +9,11 @@ function attachBuyEvents() {
     const buttons = document.querySelectorAll("#products button");
     for (const button of buttons) {
         button.addEventListener('click', function () {
-            console.log(this)
+            button.parentElement.classList.toggle("sale");
+            console.log(button.parentElement.getAttribute("data-id"));
+            console.log(button.parentElement.querySelector("h2").textContent);
+            console.log(button.parentElement.querySelector(".price").textContent);
+            console.log(button.parentElement.querySelector(".quantity").value);
         })
     }
 }
