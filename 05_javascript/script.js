@@ -39,12 +39,18 @@ function attachBuyEvents() {
                 price_th.textContent = price;
                 const total_th = document.createElement("th");
                 total_th.textContent = (parseInt(price) * parseInt(quantity)).toString();
+                const delete_ih = document.createElement("button");
+                delete_ih.textContent = "X";
+                delete_ih.addEventListener('click', function () {
+                    newRow.remove();
+                })
 
                 newRow.appendChild(id_th);
                 newRow.appendChild(title_th);
                 newRow.appendChild(quantity_th);
                 newRow.appendChild(price_th);
                 newRow.appendChild(total_th);
+                newRow.appendChild(delete_ih);
                 cart.appendChild(newRow);
             }
         })
