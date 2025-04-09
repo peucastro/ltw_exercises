@@ -17,24 +17,36 @@ function attachBuyEvents() {
             const price = article.querySelector(".price").textContent;
             const quantity = article.querySelector(".quantity").value;
 
-            const newRow = document.createElement("tr");
-            const id_th = document.createElement("th");
-            id_th.textContent = id;
-            const title_th = document.createElement("th");
-            title_th.textContent = title;
-            const quantity_th = document.createElement("th");
-            quantity_th.textContent = quantity;
-            const price_th = document.createElement("th");
-            price_th.textContent = price;
-            const total_th = document.createElement("th");
-            total_th.textContent = (parseInt(price) * parseInt(quantity)).toString();
+            const row = cart.querySelector(`tr[data-id="${id}"]`);
 
-            newRow.appendChild(id_th);
-            newRow.appendChild(title_th);
-            newRow.appendChild(quantity_th);
-            newRow.appendChild(price_th);
-            newRow.appendChild(total_th);
-            cart.appendChild(newRow);
+            if (row) {
+                const quantityCell = row.querySelector("th:nth-child(3)");
+                const totalCell = row.querySelector("th:nth-child(5)");
+
+                const newQuantity = parseInt(quantityCell.textContent) + parseInt(quantity);
+                quantityCell.textContent = newQuantity.toString();
+                totalCell.textContent = (price * newQuantity).toString();
+            } else {
+                const newRow = document.createElement("tr");
+                newRow.setAttribute("data-id", id);
+                const id_th = document.createElement("th");
+                id_th.textContent = id;
+                const title_th = document.createElement("th");
+                title_th.textContent = title;
+                const quantity_th = document.createElement("th");
+                quantity_th.textContent = quantity;
+                const price_th = document.createElement("th");
+                price_th.textContent = price;
+                const total_th = document.createElement("th");
+                total_th.textContent = (parseInt(price) * parseInt(quantity)).toString();
+
+                newRow.appendChild(id_th);
+                newRow.appendChild(title_th);
+                newRow.appendChild(quantity_th);
+                newRow.appendChild(price_th);
+                newRow.appendChild(total_th);
+                cart.appendChild(newRow);
+            }
         })
     }
 }
